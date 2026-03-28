@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>3DS_Hacks_Guide_Docker</Name>
+  <Repository>ghcr.io/wildfirebill-nintendo-3ds/guide_3ds_docker:sha-1f5f1ff</Repository>
+  <Registry>https://github.com/wildfirebill-nintendo-3ds/Guide_3DS_Docker/pkgs/container/guide_3ds_docker</Registry>
+  <Network>custom</Network>
+  <MyIP></MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/wildfirebill-nintendo-3ds/Guide_3DS_Docker/issues</Support>
+  <Project>https://github.com/wildfirebill-nintendo-3ds/Guide_3DS_Docker</Project>
+  <ReadMe>I made this for myself. I made it public so it may be useful for other people that is all.</ReadMe>
+  <Overview>A complete guide to 3DS custom firmware, from stock to boot9strap.&#13;
+&#13;
+This has been converted to docker by me using ZED. I plan on making another version with all the files included.&#13;
+&#13;
+Original content available at &#13;
+https://3ds.hacks.guide/ &#13;
+Repo at&#13;
+https://github.com/hacks-guide/Guide_3DS &#13;
+&#13;
+&#13;
+</Overview>
+  <Category>Tools: Other: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1774703406</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Host Port 1" Target="80" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <TailscaleStateDir/>
+</Container>
