@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/wildfirebill-nintendo-3ds/Guide_3DS_Docker/issues</Support>
   <Project>https://github.com/wildfirebill-nintendo-3ds/Guide_3DS_Docker</Project>
-  <ReadMe>I made this for myself. I made it public so it may be useful for other people that is all.</ReadMe>
+  <ReadMe>Vibe-coded  I made this for myself. I made it public so it may be useful for other people that is all.</ReadMe>
   <Overview>A complete guide to 3DS custom firmware, from stock to boot9strap.&#13;
 &#13;
 This has been converted to docker by me using ZED. I plan on making another version with all the files included.&#13;
