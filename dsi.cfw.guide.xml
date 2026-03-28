@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>dsi.cfw.guide</Name>
+  <Repository>ghcr.io/wildfirebill-nintendo-ds/dsi.cfw.guide:latest</Repository>
+  <Registry>https://github.com/orgs/wildfirebill-nintendo-ds/packages/container/package/dsi.cfw.guide</Registry>
+  <Network>custom</Network>
+  <MyIP></MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/wildfirebill-nintendo-ds/dsi.cfw.guide/issues</Support>
+  <Project>https://github.com/wildfirebill-nintendo-ds/dsi.cfw.guide</Project>
+  <ReadMe>vibe-coded</ReadMe>
+  <Overview>this was created for myself using zed.dev more info included on repo page&#13;
+&#13;
+DSi Guide&#13;
+&#13;
+The complete guide to modding your Nintendo DSi&#13;
+&#13;
+original repo&#13;
+&#13;
+https://github.com/cfw-guide/dsi.cfw.guide&#13;
+&#13;
+original site&#13;
+&#13;
+https://dsi.cfw.guide/</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1774710892</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Host Port 1" Target="80" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <TailscaleStateDir/>
+</Container>
