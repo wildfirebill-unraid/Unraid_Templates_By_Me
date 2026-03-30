@@ -1,19 +1,21 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>registry-ui</Name>
-  <Repository>wildfirebill/registry-ui:latest</Repository>
-  <Registry>https://hub.docker.com/r/wildfirebill/registry-ui</Registry>
+  <Repository>ghcr.io/wildfirebill-docker/registry-ui:master</Repository>
+  <Registry>https://github.com/wildfirebill-docker/registry-ui/pkgs/container/registry-ui/766804828?tag=master</Registry>
   <Network>bridge</Network>
   <MyIP></MyIP>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/wildfirebill-nintendo-dev/zed/registry-ui</Support>
-  <Project>https://github.com/wildfirebill-nintendo-dev/zed/registry-ui</Project>
+  <Support>https://github.com/wildfirebill-docker/registry-ui/issues</Support>
+  <Project>https://github.com/wildfirebill-docker/registry-ui/</Project>
   <Overview>A Docker Registry UI for browsing and managing Docker images and tags.</Overview>
+  <Requires>https://github.com/wildfirebill-unraid/Unraid_Templates_By_Me/blob/c139c2035ff160c0af2b717172d44f01c86a77c3/templates/registry-ui/config.yml</Requires>
   <Category>Docker Registry: Tools</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/quiquest/registry-ui/main/static/favicon.ico</Icon>
-  <ExtraParams></ExtraParams>
+  <TemplateURL>https://github.com/wildfirebill-unraid/Unraid_Templates_By_Me/blob/c139c2035ff160c0af2b717172d44f01c86a77c3/templates/registry-ui/registry-ui.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/wildfirebill-docker/registry-ui/refs/heads/master/static/favicon.ico</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs></PostArgs>
   <CPUset></CPUset>
   <DateInstalled>1711804800</DateInstalled>
