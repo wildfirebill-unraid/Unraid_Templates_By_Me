@@ -1,41 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
+<?xml version="1.0"?>
+<Container version="2">
   <Name>docker-registry-mariadb</Name>
-  <Description>Private Docker Registry with Multi-User Support and Modern Web UI (MariaDB Version)</Description>
-  <Registry>ghcr.io/wildfirebill-docker/docker-registry-mariadb:main</Registry>
   <Repository>ghcr.io/wildfirebill-docker/docker-registry-mariadb:main</Repository>
-  <Vendor></Vendor>
-  <SupportURL>https://github.com/wildfirebill-docker/docker-registry-mariadb/issues</SupportURL>
-  <ProjectURL>https://github.com/wildfirebill-docker/docker-registry-mariadb</ProjectURL>
-  <Icon>https://raw.githubusercontent.com/docker-library/docs/master/docker-logo.png</Icon>
-  <Categories>
-    <Category>Utilities</Category>
-    <Category>Network:Web</Category>
-  </Categories>
-  <Video/>
+  <Registry>ghcr.io/wildfirebill-docker/docker-registry-mariadb:main</Registry>
+  <Network>custom</Network>
+  <MyIP></MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/wildfirebill-docker/docker-registry-mariadb/issues</Support>
+  <Project>https://github.com/wildfirebill-docker/docker-registry-mariadb</Project>
+  <ReadMe/>
+  <Overview>Private Docker Registry with Multi-User Support and Modern Web UI (MariaDB Version)</Overview>
+  <Beta>True</Beta>
+  <Category>Network:Web Network:Other Tools:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <ExtraConfigeters>
-    
-  </ExtraConfigeters>
-  <Environment>
-    <Config name="PORT" Label="Web Port" default="8080" type="number" required="true"/>
-    <Config name="DB_DRIVER" Label="Database Driver" default="mysql" type="hidden"/>
-    <Config name="DB_HOST" Label="External DB Host" default="mariadb" type="text" required="true" description="Database host (use 'mariadb' for bundled, or external IP/hostname)"/>
-    <Config name="DB_PORT" Label="External DB Port" default="3306" type="number" required="true" description="Database port"/>
-    <Config name="DB_USER" Label="Database User" default="root" type="text" required="true" description="Database username"/>
-    <Config name="DB_PASSWORD" Label="Database Password" default="registry_root_password" type="password" required="true" description="Database password"/>
-    <Config name="DB_NAME" Label="Database Name" default="registry" type="text" required="true" description="Database name"/>
-    <Config name="DB_SOURCE" Label="Database Source (override)" default="" type="text" required="false" description="Full DSN string (overrides individual DB_* variables)"/>
-    <Config name="JWT_SECRET" Label="JWT Secret" default="change-this-secret-in-production" type="text" required="true" description="Secret key for JWT tokens - CHANGE THIS!"/>
-    <Config name="ADMIN_USERNAME" Label="Admin Username" default="admin" type="text" required="true"/>
-    <Config name="ADMIN_PASSWORD" Label="Admin Password" default="admin123" type="password" required="true" description="CHANGE THIS PASSWORD IMMEDIATELY"/>
-    <Config name="ADMIN_EMAIL" Label="Admin Email" default="admin@localhost" type="text" required="false"/>
-    <Config name="HTTPS_ENABLED" Label="HTTPS Enabled" default="false" type="select" required="false" options="true,false" description="Set to true if running behind HTTPS proxy"/>
-    <Config name="TZ" Label="Timezone" default="UTC" type="text" required="false" description="Container timezone (e.g., America/New_York)"/>
-  </Environment>
-  <Labels>
-    <Label name="net.unraid.docker.icon" value="docker-logo.png"/>
-  </Labels>
-  <ConfigFile>config/unraid-mariadb.xml</ConfigFile>
-  <Privileges/>
+  <TemplateURL>https://github.com/wildfirebill-unraid/Unraid_Templates_By_Me/blob/6ac2d4f45c2173b0bc6420fe0e9e291cf75ab74c/templates/tools/docker-registry-mariadb.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/docker-library/docs/master/docker-logo.png</Icon>
+  <ExtraParams>--always-restrart</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <Date>2026-04-07</Date>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>MariaDB / MySQL database installed</Requires>
+  <Config Name="PORT" Target="8080" Default="8080" Type="Port" Mode="tcp" Display="always" Required="true" Description="Web port"/>
+  <Config Name="DB_HOST" Target="External DB Host" Default="mariadb" Type="Variable" Display="always" Required="true" Description="Database host (use 'mariadb' for bundled, or external IP/hostName)"/>
+  <Config Name="DB_PORT" Target="External DB Port" Default="3306" Type="Variable" Display="always" Required="true" Description="Database port"/>
+  <Config Name="DB_USER" Target="Database User" Default="root" Type="Variable" Display="always" Required="true" Description="Database username"/>
+  <Config Name="DB_PASSWORD" Target="Database Password" Default="registry_root_password" Type="Variable" Display="always" Required="true" Description="Database password"/>
+  <Config Name="DB_Name" Target="Database Name" Default="registry" Type="Variable" Display="always" Required="true" Description="Database Name"/>
+  <Config Name="JWT_SECRET" Target="JWT Secret" Default="change-this-secret-in-production" Type="Variable" Display="always" Required="true" Description="Secret key for JWT tokens - CHANGE THIS! (Not Recommended to use outside sources.) https://jwtsecrets.com/#generator "/>
+  <Config Name="ADMIN_USERNAME" Target="Admin Username" Default="admin" Type="Variable" Display="always" Required="true" Description="Admin Username"/>
+  <Config Name="ADMIN_PASSWORD" Target="Admin Password" Default="admin123" Type="Variable" Display="always" Required="true" Description="CHANGE THIS PASSWORD IMMEDIATELY"/>
+  <Config Name="ADMIN_EMAIL" Target="Admin Email" Default="admin@localhost" Type="Variable" Display="always" Required="false" Description="Admin Email"/>
+  <Config Name="TZ" Target="Timezone" Default="UTC" Type="Variable" Display="always" Required="false" Description="Container timezone (e.g., America/New_York)"/>
+  <Config Name="DB_DRIVER" Target="Database Driver" Default="mysql" Type="Variable" Display="advanced"/>
+  <Config Name="HTTPS_ENABLED" Target="HTTPS Enabled" Default="false" Type="Variable" Display="advanced-hide" Required="false" Options="false|true" Description="Set to true if running behind HTTPS proxy"/>
+  <Config Name="DB_SOURCE" Target="Database Source (override)" Default="" Type="Variable" Display="advanced-hide" Required="false" Description="Full DSN string (overrides individual DB_* variables)"/>
 </Container>
