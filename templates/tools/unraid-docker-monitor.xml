@@ -10,7 +10,7 @@
   <Project>https://github.com/wildfirebill-docker/unraid-docker-monitor</Project>
   <Author>wildfirebill</Author>
   <Support>https://github.com/wildfirebill-docker/unraid-docker-monitor/issues</Support>
-  <TemplateURL></TemplateURL>
+  <TemplateURL>https://github.com/wildfirebill-unraid/Unraid_Templates_By_Me/blob/fec35d4fded1d3ac8671b77bed3500d59e670a68/templates/tools/unraid-docker-monitor.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/wildfirebill-docker/unraid-docker-monitor/refs/heads/main/icon.svg</Icon>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
