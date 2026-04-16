@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>joplin-server-sqlite</Name>
+  <Repository>joplin/server:latest</Repository>
+  <Registry>https://hub.docker.com/r/joplin/server/</Registry>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:22300]</WebUI>
+  <Category>Other:</Category>
+  <Overview>Self-hosted sync server for Joplin notes app.</Overview>
+  <Project></Project>
+  <Author></Author>
+  <Support>https://github.com/laurent22/joplin</Support>
+  <TemplateURL>https://github.com/wildfirebill-unraid/Unraid_Templates_By_Me/tree/fa101eafc1fe1177e038db44ce6e98ee9e93d6bd/templates/office</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/joplin/assetRefs/master/favicon/favicon-256x256.png</Icon>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <ExtraParams></ExtraParams>
+  <PostArgs></PostArgs>
+  <Config Name="WebUI" Target="22300" Default="22300" Mode="tcp" Description="WebUI Port" Type="Port" Display="always" Required="true" Mask="false">22300</Config>
+  <Config Name="APP_PORT" Target="APP_PORT" Default="22300" Mode="" Description="Specify the value for env: APP_PORT" Type="Variable" Display="always" Required="true" Mask="false">22300</Config>
+  <Config Name="APP_BASE_URL" Target="APP_BASE_URL" Default="http://localhost:22300" Mode="" Description="Specify the value for env: APP_BASE_URL" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:22300</Config>
+</Container>

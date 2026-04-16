@@ -1,0 +1,10 @@
+services:
+  joplin:
+    image: joplin/server:latest
+    container_name: joplin-server-sqlite
+    restart: unless-stopped
+    ports:
+      - "22300:22300"
+    environment:
+      - APP_PORT=22300
+      - APP_BASE_URL=http://localhost:22300
