@@ -10,7 +10,7 @@
   <Project></Project>
   <Author></Author>
   <Support>https://github.com/laurent22/joplin</Support>
-  <TemplateURL>https://github.com/wildfirebill-unraid/Unraid_Templates_By_Me/tree/fa101eafc1fe1177e038db44ce6e98ee9e93d6bd/templates/office</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/wildfirebill-unraid/Unraid_Templates_By_Me/refs/heads/main/templates/office/joplin-server-sqlite/joplin-server-sqlite.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/joplin/assetRefs/master/favicon/favicon-256x256.png</Icon>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
