@@ -1,0 +1,22 @@
+services:
+  joplin:
+    image: joplin/server
+    container_name: joplin-server
+    restart: unless-stopped
+    ports:
+      - "22300:22300"
+    environment:
+      - APP_PORT=22300
+      - APP_BASE_URL=http://localhost:22300
+      - DB_CLIENT=pg
+      - POSTGRES_HOST=joplin-postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_DATABASE=joplin
+      - POSTGRES_USER=joplin
+      - POSTGRES_PASSWORD=joplinpassword
+      - MAILER_ENABLED=0
+    networks:
+      - joplin-network
+
+networks:
+  joplin-network:

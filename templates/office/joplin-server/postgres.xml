@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>joplin-postgres</Name>
+  <Repository>library/postgres:16-alpine</Repository>
+  <Registry>https://hub.docker.com/r/library/postgres</Registry>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:5432]</WebUI>
+  <Category>Database:</Category>
+  <Overview>PostgreSQL database for Joplin Server.&lt;br&gt;&lt;br&gt;Template generated using comp2unraid.</Overview>
+  <Project>https://www.postgresql.org/</Project>
+  <Author>PostgreSQL</Author>
+  <Support>https://github.com/docker-library/postgres/issues</Support>
+  <Icon>https://raw.githubusercontent.com/joplin/assetRefs/master/favicon/favicon-256x256.png</Icon>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <ExtraParams></ExtraParams>
+  <PostArgs></PostArgs>
+  <Config Name="Postgres Port" Target="5432" Default="5432" Mode="tcp" Description="PostgreSQL port" Type="Port" Display="always" Required="true" Mask="false">5432</Config>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="joplinpassword" Mode="" Description="PostgreSQL password" Type="Variable" Display="always" Required="true" Mask="true">joplinpassword</Config>
+  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="joplin" Mode="" Description="Database name" Type="Variable" Display="always" Required="true" Mask="false">joplin</Config>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="joplin" Mode="" Description="Database user" Type="Variable" Display="always" Required="true" Mask="false">joplin</Config>
+  <Config Name="Data Volume" Target="/var/lib/postgresql/data" Default="" Mode="rw" Description="PostgreSQL data volume" Type="Path" Display="always" Required="true" Mask="false"></Config>
+</Container>

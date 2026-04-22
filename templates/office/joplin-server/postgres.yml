@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: joplin-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=joplin
+      - POSTGRES_PASSWORD=joplinpassword
+      - POSTGRES_DB=joplin
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U joplin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - joplin-network
+
+volumes:
+  postgres-data:
+
+networks:
+  joplin-network:
