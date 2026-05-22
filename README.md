@@ -1,4 +1,7 @@
 # Unraid_Templates_By_Me
+
+Created by [wildfirebill](https://github.com/wildfirebill)
+
 These templates were made by me. I am making them public incase anyone else finds them useful.  
 I used zed.dev to assist in the dockerization of the programs.
 Full discloser I am just playing around with these.
